@@ -5,9 +5,10 @@ import java.util.Optional;
 
 public class UserService implements UserApi {
 
-	private final UserDao userDao;
+	private UserDao userDao;
 
 	public UserService(UserDao userDao) {
+		super();
 		this.userDao = userDao;
 	}
 

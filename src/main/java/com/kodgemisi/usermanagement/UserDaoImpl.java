@@ -56,8 +56,13 @@ public class UserDaoImpl implements UserDao {
 		if (user.isNew()) {
 			throw new IllegalArgumentException("You can only update existing users (users with id). This user has no id");
 		}
-
-		return userMap.put(user.getId(), user);
+		
+		//Here is the issue, In the previous form return userMap.put(user.getId(), user);  
+		// we do not returning the user, we return usermap function. So that it wont change values.
+		
+		userMap.put(user.getId(), user);
+		return user;
+				
 	}
 
 	@Override
