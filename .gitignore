@@ -165,3 +165,4 @@ reference.sql
 .DS_Store
 
 *.hprof
+/target/
