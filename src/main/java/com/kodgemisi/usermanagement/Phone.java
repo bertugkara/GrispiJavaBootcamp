@@ -33,7 +33,7 @@ public class Phone implements CharSequence {
 		if (phoneNumber.equals("112") || phoneNumber.equals("911")) {
 			return true;
 		}
-		else if (phoneNumber==null ) {
+		else if (phoneNumber.equals(null) ) {
 			throw new IllegalArgumentException("A phone number cannot be null");
 		}
 		else if ( phoneNumber.isBlank() ) {
